@@ -7,3 +7,12 @@ Requirements:
 2, Chicken lays chicken egg.
 3, Different bird type lays diff eggs, correspondingly.
 4, Hatch twice will throw exception.
+
+// test
+$bird = new Chicken();
+try {
+    $egg = $bird->layEgg()->hatch();
+    var_dump($egg->getBirdType()); // output "Chicken"
+} catch (Exception $e) {
+    echo "error:" . $e->getMessage();
+}
